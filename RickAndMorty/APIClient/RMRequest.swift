@@ -15,7 +15,7 @@ final class RMRequest {
   }
 
   private let endPoint: RMEndpoint
-  private let patchComponents: Set<String>
+  private let patchComponents: [String]
   private let queryParameters: [URLQueryItem]
   private var urlString: String {
     var string = Constants.baseUrl
@@ -47,7 +47,7 @@ final class RMRequest {
 
   public init(
     endPoint: RMEndpoint,
-    patchComponents: Set<String> = [],
+    patchComponents: [String] = [],
     queryParameters: [URLQueryItem] = []
   ) {
     self.endPoint = endPoint
@@ -56,3 +56,6 @@ final class RMRequest {
   }
 }
 
+extension RMRequest {
+  static let listCharacterRequest = RMRequest(endPoint: .character)
+}
