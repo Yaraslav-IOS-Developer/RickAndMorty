@@ -10,7 +10,7 @@ import UIKit
 final class RMCharacterCollectionViewCell: UICollectionViewCell {
   private let imageView: UIImageView = {
     let imageView = UIImageView()
-    imageView.contentMode = .scaleAspectFit
+    imageView.contentMode = .scaleAspectFill
     imageView.translatesAutoresizingMaskIntoConstraints = false
     return imageView
   }()
@@ -63,7 +63,7 @@ final class RMCharacterCollectionViewCell: UICollectionViewCell {
       nameLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -5),
 
       statusLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -3),
-      nameLabel.bottomAnchor.constraint(equalTo: statusLabel.bottomAnchor, constant: -3),
+      nameLabel.bottomAnchor.constraint(equalTo: statusLabel.topAnchor, constant: -3),
 
       imageView.topAnchor.constraint(equalTo: contentView.topAnchor),
       imageView.leftAnchor.constraint(equalTo: contentView.leftAnchor),

@@ -24,7 +24,7 @@ final class RMCharacterListView: UIView {
     collectionView.isHidden = true
     collectionView.alpha = 0
     collectionView.translatesAutoresizingMaskIntoConstraints = false
-    collectionView.registerNibCell(ofType: RMCharacterCollectionViewCell.self)
+    collectionView.registerCell(RMCharacterCollectionViewCell.self)
 
     return collectionView
   }()

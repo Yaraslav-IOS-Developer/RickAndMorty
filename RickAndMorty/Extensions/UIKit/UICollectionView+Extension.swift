@@ -8,14 +8,16 @@
 import UIKit
 
 extension UICollectionView {
-  func registerNibCell<CellType: UICollectionViewCell>(ofType type: CellType.Type) {
-    let nibName = String(describing: type)
-    let nib = UINib(nibName: nibName, bundle: nil)
-    register(nib, forCellWithReuseIdentifier: nibName)
+  func registerCell<CellType: UICollectionViewCell>(_ cellClass: CellType.Type) {
+    let identifier = String(describing: cellClass)
+    register(cellClass, forCellWithReuseIdentifier: identifier)
   }
 
-  func dequeueReusableNibCell<CellType: UICollectionViewCell>(of type: CellType.Type, forIndexPath indexPath: IndexPath) -> UICollectionViewCell {
-    let identifier = String(describing: type)
-    return dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath)
+  func dequeueReusableCell<CellType: UICollectionViewCell>(_ cellClass: CellType.Type, forIndexPath indexPath: IndexPath) -> CellType {
+    let identifier = String(describing: cellClass)
+    guard let cell = dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as? CellType else {
+      fatalError("Failed to dequeue cell with identifier: \(identifier)")
+    }
+    return cell
   }
 }

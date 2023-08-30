@@ -28,13 +28,11 @@ extension RMCharacterListViewViewModel: UICollectionViewDataSource {
   }
 
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    guard let cell = collectionView.dequeueReusableNibCell(of: RMCharacterCollectionViewCell.self, forIndexPath: indexPath) as? RMCharacterCollectionViewCell  else {
-      return UICollectionViewCell()
-    }
-    let viewModel = RMCharacterCollectionViewCellViewModel(characterName: "Test",
-                                                           characterStatus: .alive,
-                                                           characterImageUrl: nil)
-    cell.configure(with: viewModel)
+    let cell = collectionView.dequeueReusableCell(RMCharacterCollectionViewCell.self, forIndexPath: indexPath)
+      let viewModel = RMCharacterCollectionViewCellViewModel(characterName: "Test",
+                                                             characterStatus: .alive,
+                                                             characterImageUrl: URL(string: "https://s1.gifyu.com/images/best-nature-place-hd-images-2-nature-wallpaper-posted-in-hd.jpg") )
+      cell.configure(with: viewModel)
     return cell
   }
 }
