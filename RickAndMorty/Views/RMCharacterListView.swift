@@ -8,8 +8,6 @@
 import UIKit
 
 final class RMCharacterListView: UIView {
-  private let viewModel = RMCharacterListViewViewModel()
-
   private let spinner: UIActivityIndicatorView = {
     let spinner = UIActivityIndicatorView(style: .large)
     spinner.hidesWhenStopped = true
@@ -28,6 +26,8 @@ final class RMCharacterListView: UIView {
 
     return collectionView
   }()
+
+  private lazy var viewModel = RMCharacterListViewViewModel(delegate: self)
 
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -64,12 +64,18 @@ final class RMCharacterListView: UIView {
   private func setupCollectionView() {
     collectionView.dataSource = viewModel
     collectionView.delegate = viewModel
+  }
+}
 
-    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
-      self.spinner.stopAnimating()
-      self.collectionView.isHidden = false
+extension RMCharacterListView: RMCharacterListViewViewModelDelegate {
+  func didLoadInitialCharacter() {
+    DispatchQueue.main.async { [weak self] in
+      guard let sSelf = self else { return }
+      sSelf.spinner.stopAnimating()
+      sSelf.collectionView.reloadData()
+      sSelf.collectionView.isHidden = false
       UIView.animate(withDuration: 0.4) {
-        self.collectionView.alpha = 1
+        sSelf.collectionView.alpha = 1
       }
     }
   }

@@ -13,7 +13,7 @@ final class RMCharacterCollectionViewCellViewModel {
 
   public let characterName: String
   public var characterStatusText: String {
-    return characterStatus.rawValue
+    return "Status: \(characterStatus.text)"
   }
 
   init(
