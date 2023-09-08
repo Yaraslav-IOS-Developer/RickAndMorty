@@ -10,14 +10,20 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
   var window: UIWindow?
+  var appCoordinator: AppCoordinator!
+  var appFactory: AppFactory!
 
 
-  func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+  func scene(
+    _ scene: UIScene,
+    willConnectTo session: UISceneSession,
+    options connectionOptions: UIScene.ConnectionOptions
+  ) {
     guard let windowScene = (scene as? UIWindowScene) else { return }
-    let window = UIWindow(windowScene: windowScene)
-    window.rootViewController = RMTabBarViewController()
-    window.makeKeyAndVisible()
-    self.window = window
+    window = UIWindow(windowScene: windowScene)
+    let navigation = UINavigationController()
+    appFactory = AppFactoryImp()
+    appCoordinator = AppCoordinator(navigation: navigation, appFactory: appFactory, window: window)
   }
 
   func sceneDidDisconnect(_ scene: UIScene) {
@@ -47,7 +53,5 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     // Use this method to save data, release shared resources, and store enough scene-specific state information
     // to restore the scene back to its current state.
   }
-
-
 }
 
