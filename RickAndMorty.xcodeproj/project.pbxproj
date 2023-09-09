@@ -10,6 +10,8 @@
 		C43A67BC2A9D1F1C00FB69FB /* RMCharacterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43A67BB2A9D1F1C00FB69FB /* RMCharacterCollectionViewCell.swift */; };
 		C43A67BE2A9D1F9100FB69FB /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43A67BD2A9D1F9100FB69FB /* UICollectionView+Extension.swift */; };
 		C43A67C02A9D204000FB69FB /* RMCharacterCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43A67BF2A9D204000FB69FB /* RMCharacterCollectionViewCellViewModel.swift */; };
+		C470CAD62AAC8F8800C9BCC1 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C470CAD52AAC8F8800C9BCC1 /* HomeCoordinator.swift */; };
+		C470CAD82AAC8FFA00C9BCC1 /* HomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C470CAD72AAC8FFA00C9BCC1 /* HomeFactory.swift */; };
 		C474F9C22AAA6388001E0599 /* HomeMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C474F9C12AAA6388001E0599 /* HomeMenuViewController.swift */; };
 		C48D449B2AAB9D4700C5E13A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48D449A2AAB9D4700C5E13A /* Coordinator.swift */; };
 		C48D449E2AAB9DC100C5E13A /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48D449D2AAB9DC100C5E13A /* AppCoordinator.swift */; };
@@ -43,6 +45,8 @@
 		C43A67BB2A9D1F1C00FB69FB /* RMCharacterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCharacterCollectionViewCell.swift; sourceTree = "<group>"; };
 		C43A67BD2A9D1F9100FB69FB /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		C43A67BF2A9D204000FB69FB /* RMCharacterCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCharacterCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
+		C470CAD52AAC8F8800C9BCC1 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		C470CAD72AAC8FFA00C9BCC1 /* HomeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFactory.swift; sourceTree = "<group>"; };
 		C474F9C12AAA6388001E0599 /* HomeMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuViewController.swift; sourceTree = "<group>"; };
 		C48D449A2AAB9D4700C5E13A /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		C48D449D2AAB9DC100C5E13A /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -269,6 +273,7 @@
 		C474F9B62AAA6203001E0599 /* CoordinatorScreans */ = {
 			isa = PBXGroup;
 			children = (
+				C470CAD52AAC8F8800C9BCC1 /* HomeCoordinator.swift */,
 			);
 			path = CoordinatorScreans;
 			sourceTree = "<group>";
@@ -277,6 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				C48D449F2AAB9E2200C5E13A /* AppFactory.swift */,
+				C470CAD72AAC8FFA00C9BCC1 /* HomeFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -589,12 +595,14 @@
 				C4CC4C9E2A968FC600E705E4 /* RMSingleLocation.swift in Sources */,
 				C48D449B2AAB9D4700C5E13A /* Coordinator.swift in Sources */,
 				C4CF95AF2A9A7969008786CB /* RMGetAllCharactersResponse.swift in Sources */,
+				C470CAD62AAC8F8800C9BCC1 /* HomeCoordinator.swift in Sources */,
 				C4B4652A2A9BBC1B00DECA67 /* RMCharacterListViewViewModel.swift in Sources */,
 				C4CC4CA02A96910500E705E4 /* RMCharacterStatus.swift in Sources */,
 				C48D449E2AAB9DC100C5E13A /* AppCoordinator.swift in Sources */,
 				C4CC4C8F2A9545CA00E705E4 /* RMLocationViewController.swift in Sources */,
 				C4CC4C882A95448600E705E4 /* RMEpisode.swift in Sources */,
 				C4CC4C6D2A953F1700E705E4 /* RMTabBarViewController.swift in Sources */,
+				C470CAD82AAC8FFA00C9BCC1 /* HomeFactory.swift in Sources */,
 				C4CC4C912A9545DE00E705E4 /* RMEpisodeViewController.swift in Sources */,
 				C43A67BE2A9D1F9100FB69FB /* UICollectionView+Extension.swift in Sources */,
 				C48D44A02AAB9E2200C5E13A /* AppFactory.swift in Sources */,
