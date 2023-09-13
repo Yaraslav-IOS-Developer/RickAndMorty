@@ -29,10 +29,13 @@ struct ApiClineServiceImp: ApiClientService {
     switch httpResponse.statusCode {
       case HttpResponseStatus.success:
         return try decodeModel(data: request.data)
+
       case HttpResponseStatus.clientError:
         throw ApiError.clientError
+
       case HttpResponseStatus.serverError:
         throw ApiError.serverError
+        
       default:
         throw ApiError.unknownError
     }

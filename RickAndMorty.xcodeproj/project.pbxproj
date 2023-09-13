@@ -20,6 +20,8 @@
 		C470CAEB2AACDCE600C9BCC1 /* MenuRepositoryImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C470CAEA2AACDCE600C9BCC1 /* MenuRepositoryImp.swift */; };
 		C470CAEE2AACDD5000C9BCC1 /* LoadMenuUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C470CAED2AACDD5000C9BCC1 /* LoadMenuUseCase.swift */; };
 		C474F9C22AAA6388001E0599 /* HomeMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C474F9C12AAA6388001E0599 /* HomeMenuViewController.swift */; };
+		C47BBFEA2AB2429500BAFE08 /* AppLocalized.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47BBFE92AB2429500BAFE08 /* AppLocalized.swift */; };
+		C47BBFEC2AB2462D00BAFE08 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47BBFEB2AB2462D00BAFE08 /* Images.swift */; };
 		C48D449B2AAB9D4700C5E13A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48D449A2AAB9D4700C5E13A /* Coordinator.swift */; };
 		C48D449E2AAB9DC100C5E13A /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48D449D2AAB9DC100C5E13A /* AppCoordinator.swift */; };
 		C48D44A02AAB9E2200C5E13A /* AppFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48D449F2AAB9E2200C5E13A /* AppFactory.swift */; };
@@ -54,6 +56,8 @@
 		C470CAEA2AACDCE600C9BCC1 /* MenuRepositoryImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRepositoryImp.swift; sourceTree = "<group>"; };
 		C470CAED2AACDD5000C9BCC1 /* LoadMenuUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMenuUseCase.swift; sourceTree = "<group>"; };
 		C474F9C12AAA6388001E0599 /* HomeMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuViewController.swift; sourceTree = "<group>"; };
+		C47BBFE92AB2429500BAFE08 /* AppLocalized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLocalized.swift; sourceTree = "<group>"; };
+		C47BBFEB2AB2462D00BAFE08 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		C48D449A2AAB9D4700C5E13A /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		C48D449D2AAB9DC100C5E13A /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		C48D449F2AAB9E2200C5E13A /* AppFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFactory.swift; sourceTree = "<group>"; };
@@ -203,7 +207,6 @@
 			children = (
 				C4A7FF412AAE080600FFF1B2 /* Components */,
 				C474F9B32AAA617C001E0599 /* Localize */,
-				C474F9B22AAA615F001E0599 /* StateController */,
 				C474F9B12AAA6133001E0599 /* Utils */,
 				C474F9AD2AAA60B6001E0599 /* Layer */,
 				C474F9AA2AAA605E001E0599 /* Constant */,
@@ -228,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				C4CC4C712A953F1900E705E4 /* Assets.xcassets */,
+				C47BBFEB2AB2462D00BAFE08 /* Images.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -305,7 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				C474F9AB2AAA6078001E0599 /* Components */,
-				C4264B232AACDFFF005E80C2 /* StateController.swift */,
+				C474F9B22AAA615F001E0599 /* StateController */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -321,6 +325,7 @@
 		C474F9B22AAA615F001E0599 /* StateController */ = {
 			isa = PBXGroup;
 			children = (
+				C4264B232AACDFFF005E80C2 /* StateController.swift */,
 			);
 			path = StateController;
 			sourceTree = "<group>";
@@ -328,6 +333,7 @@
 		C474F9B32AAA617C001E0599 /* Localize */ = {
 			isa = PBXGroup;
 			children = (
+				C47BBFE92AB2429500BAFE08 /* AppLocalized.swift */,
 			);
 			path = Localize;
 			sourceTree = "<group>";
@@ -623,8 +629,10 @@
 				C470CAEB2AACDCE600C9BCC1 /* MenuRepositoryImp.swift in Sources */,
 				C48D44A02AAB9E2200C5E13A /* AppFactory.swift in Sources */,
 				C4CC4C692A953F1700E705E4 /* AppDelegate.swift in Sources */,
+				C47BBFEC2AB2462D00BAFE08 /* Images.swift in Sources */,
 				C4CC4C6B2A953F1700E705E4 /* SceneDelegate.swift in Sources */,
 				C474F9C22AAA6388001E0599 /* HomeMenuViewController.swift in Sources */,
+				C47BBFEA2AB2429500BAFE08 /* AppLocalized.swift in Sources */,
 				C4A7FF3A2AADB58300FFF1B2 /* MenuDTO.swift in Sources */,
 				C4A7FF302AADACF500FFF1B2 /* ApiClineServiceImp.swift in Sources */,
 				C4A7FF332AADADD200FFF1B2 /* ApiError.swift in Sources */,

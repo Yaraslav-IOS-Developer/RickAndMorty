@@ -51,7 +51,7 @@ final class HomeMenuViewController: UICollectionViewController {
           case .loading:
             sSelf.showSpinner()
           case .fail(error: let error):
-            sSelf.showAlert(message: error, title: "Error")
+            sSelf.showAlert(message: error, title: AppLocalized.error)
         }
       }.store(in: &cancellable)
   }
