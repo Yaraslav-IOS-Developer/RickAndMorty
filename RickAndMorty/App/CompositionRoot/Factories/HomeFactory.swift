@@ -10,6 +10,7 @@ import Combine
 
 protocol HomeFactory {
   func makeModule(coordinator: HomeMenuViewControllerCoordinator) -> UIViewController
+  func makeCoordinatorCharacters(navigation: UINavigationController, urlList: String) -> Coordinator
 }
 
 struct HomeFactoryImp: HomeFactory {
@@ -33,6 +34,12 @@ struct HomeFactoryImp: HomeFactory {
     layout.minimumInteritemSpacing = .zero
     layout.sectionInset = UIEdgeInsets(top: .zero, left: ViewValues.normalPadding, bottom: .zero, right: ViewValues.normalPadding)
     return layout
+  }
+
+  func makeCoordinatorCharacters(navigation: UINavigationController, urlList: String) -> Coordinator {
+    let characterFactory = CharactersFactoryImp()
+    let characterCoordinator = CharactersCoordinator(navigation: navigation, characterFactory: characterFactory)
+    return characterCoordinator
   }
 }
 

@@ -26,7 +26,7 @@ extension HomeCoordinator: HomeMenuViewControllerCoordinator {
   func didSelectMenuCell(model: MenuItem) {
     switch model.title {
       case "characters":
-        goToCharacters()
+        goToCharacters(urlList: model.url)
       case "episodes":
         goToEpisodes()
       case "locations":
@@ -36,8 +36,9 @@ extension HomeCoordinator: HomeMenuViewControllerCoordinator {
     }
   }
 
-  private func goToCharacters() {
-    print("screen characters")
+  private func goToCharacters(urlList: String) {
+    let characterCoordinator = homeFactory.makeCoordinatorCharacters(navigation: navigation, urlList: urlList)
+    characterCoordinator.start()
   }
 
   private func goToEpisodes() {
