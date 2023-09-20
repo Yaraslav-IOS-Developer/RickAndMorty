@@ -12,8 +12,7 @@ protocol CharacterViewControllerCoordinator: AnyObject {
 }
 
 final class CharactersViewController: UITableViewController {
-
-
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     configureTableView()
